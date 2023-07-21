@@ -3,66 +3,124 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Web Design Portfolio</title>
-  <link rel="stylesheet" href="styles.css"> <!-- Link to your custom CSS file -->
+  <title>Edrine Solomon- Web Developer Portfolio</title>
+  <style>
+    /* Reset some default styles */
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+    /* Main styles */
+    body {
+      background-color: #f7f7f7;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 1rem 0;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    .hero {
+      text-align: center;
+      margin-top: 3rem;
+    }
+    .hero img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .intro {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .skills {
+      margin-top: 2rem;
+    }
+    .skills ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+    .skills li {
+      margin: 0 1rem;
+    }
+    .projects {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .projects img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1rem;
+    }
+    .contact {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .contact a {
+      text-decoration: none;
+      color: #333;
+      border: 2px solid #333;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+    .contact a:hover {
+      background-color: #333;
+      color: #fff;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <h1>Solomon Edrine</h1>
+    <p>Web Developer</p>
   </header>
-
-  <section id="about">
-    <div class="container">
-      <h1>About Me</h1>
-      <p>Welcome to my web design portfolio! I am passionate about creating beautiful and functional websites.</p>
-      <p>...</p> <!-- Add more content about yourself -->
+  <div class="container">
+    <div class="hero">
+      <img src="path/to/your/profile-image.jpg" alt="Edrine">
     </div>
-  </section>
-
-  <section id="portfolio">
-    <div class="container">
-      <h2>Portfolio</h2>
-      <div class="project">
-        <img src="project1.jpg" alt="Project 1">
-        <h3>Project 1</h3>
-        <p>Description of Project 1.</p>
-      </div>
-      <div class="project">
-        <img src="project2.jpg" alt="Project 2">
-        <h3>Project 2</h3>
-        <p>Description of Project 2.</p>
-      </div>
-      <!-- Add more projects with similar structure -->
+    <div class="intro">
+      <p>Hello! I'm Edrine Solomon, a passionate web developer with expertise in front-end technologies and backend.</p>
     </div>
-  </section>
-
-  <section id="contact">
-    <div class="container">
+    <div class="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Node.js</li>
+        <li>Express.js</li>
+        <!-- Add more skills as needed -->
+      </ul>
+    </div>
+    <div class="projects">
+      <h2>Projects</h2>
+      <div>
+        <img src="path/to/project1-thumbnail.jpg" alt="Project 1">
+        <!-- Add more project images and descriptions as needed -->
+      </div>
+    </div>
+    <div class="contact">
       <h2>Contact Me</h2>
-      <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-        
-        <input type="submit" value="Send Message">
-      </form>
+      <p>If you're interested in working together or want to connect, feel free to reach out!</p>
+      <a href="mailto:edrinesolomon@gmail.com">Email Me</a>
     </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2023 My Web Design Portfolio. All rights reserved.</p>
-  </footer>
+  </div>
 </body>
 </html>
-
