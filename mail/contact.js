@@ -1,4 +1,11 @@
 $(function () {
+     // Date and time picker
+     $('.date').datetimepicker({
+        format: 'L'
+    });
+    $('.time').datetimepicker({
+        format: 'LT'
+    });
 
     $("#contactForm input, #contactForm textarea").jqBootstrapValidation({
         preventSubmit: true,
@@ -15,7 +22,7 @@ $(function () {
             $this.prop("disabled", true);
 
             $.ajax({
-                url: "contact.php",
+                url: "mail/contact.php",
                 type: "POST",
                 data: {
                     name: name,

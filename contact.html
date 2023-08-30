@@ -24,6 +24,19 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+    $(function(){
+        $('.date-withicon').datepicker({
+        format: 'mm-dd-yyyy'
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -140,7 +153,7 @@
         <div class="container py-5">
             <div class="text-center mb-3 pb-3">
                 <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Contact</h6>
-                <h1>Contact For Booking</h1>
+                <h1>Plan Your Trip</h1>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
@@ -170,6 +183,93 @@
                                     data-validation-required-message="Please enter your message"></textarea>
                                 <p class="help-block text-danger"></p>
                             </div>
+                            <div class="control-group">
+                                <p>
+                                    How did you find us?
+                                </p>
+                                <input name="input_23.1" type="checkbox" value="Online" id="choice_25_23_1">
+                                <label for="choice_25_23_1" id="label_25_23_1">Online</label></br>
+                                <input name="input_23.2" type="checkbox" value="Online" id="choice_25_23_1">
+                                <label for="choice_25_23_2" id="label_25_23_2">Social Media</label></br>
+                                <input name="input_23.3" type="checkbox" value="Online" id="choice_25_23_1">
+                                <label for="choice_25_23_3" id="label_25_23_3">A Friend</label></br>
+                                
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <label class="gfield_label" for="input_25_25">Your proposed / ideal travel dates? (From)<span class="gfield_required">*</span></label>
+                                <div class="ginput_container ginput_container_date">
+                                    <!-- <input name="input_25" id="input_25_25" type="text" value class="datepicker medium mdy datepicker_with_icon hasDatepicker" aria-describedby="input_25_25_date_format">
+                                    <img class="ui-datepicker-trigger" src="img/calendar.png" alt title>
+                                    <span id="input_25_25_date_format" class="screen-reader-text">Date Format: MM slash DD slash YYYY</span> -->
+                                    
+                                    <div class="input-group date" data-provide="datepicker">
+                                        <input type="text" class="form-control date-withicon" placeholder="Select Date"/>
+                                        <div class="input-group-addon">
+                                            <span class="glyphicon glyphicon-th">
+                                                <img class="ui-datepicker-trigger" src="img/calendar.png" alt title>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <label class="gfield_label" for="input_25_25">Your proposed / ideal travel dates? (To)<span class="gfield_required">*</span></label>
+                                <div class="ginput_container ginput_container_date">
+                                    <!-- <input name="input_25" id="input_25_25" type="text" value class="datepicker medium mdy datepicker_with_icon hasDatepicker" aria-describedby="input_25_25_date_format">
+                                    <img class="ui-datepicker-trigger" src="img/calendar.png" alt title>
+                                    <span id="input_25_25_date_format" class="screen-reader-text">Date Format: MM slash DD slash YYYY</span> -->
+                                    
+                                    <div class="input-group date" data-provide="datepicker" >
+                                        <input type="text" class="form-control date-withicon" placeholder="Select Date"/>
+                                        <div class="input-group-addon">
+                                            <span class="glyphicon glyphicon-th">
+                                                <img class="ui-datepicker-trigger" src="img/calendar.png" alt title>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <p>Number of people in your party?</p>
+                                    <input type="text" class="form-control p-4" id="party" placeholder="party"
+                                        required="required" data-validation-required-message="Number of people in your party" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="control-group">
+                                    <p>Do you have a travel budget in mind?</p>
+                                    <div class="ginput_container ginput_container_radio">
+                                        <ul class="gfield_radio" id="input_25_40">
+                                            <li class="gchoice_25_40_0">
+                                                <input name="input_40" type="radio" value="Below $500 (person per day)" id="choice_25_40_0">
+                                                <label for="choice_25_40_0" id="label_25_40_0">Below $500 (person per day)</label>
+                                            </li>
+                                            <li class="gchoice_25_40_0">
+                                                <input name="input_40" type="radio" value="$500 - $1000 (person per day)" id="choice_25_40_0">
+                                                <label for="choice_25_40_0" id="label_25_40_0">$500 - $1000 (person per day)</label>
+                                            </li>
+                                            <li class="gchoice_25_40_0">
+                                                <input name="input_40" type="radio" value="$1100 and over (person per day)" id="choice_25_40_0">
+                                                <label for="choice_25_40_0" id="label_25_40_0">$1100 and over (person per day)</label>
+                                            </li>
+
+                                        </ul>
+
+                                    </div>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="control-group">
+                                    <p>Other Comments</p>
+                                    <textarea class="form-control py-3 px-4" rows="5" id="comments" ></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="control-group">
+                                    <p>CAPTCHA</p>
+                                    <div class="g-recaptcha" data-sitekey="6LcCVs0nAAAAAFmmOHaODM_CSF1LOqpXVMGp9hfw "></div>
+                                    
+                                    <p class="help-block text-danger"></p>
+                                </div>
                             <div class="text-center">
                                 <button class="btn btn-primary py-3 px-4" type="submit" id="sendMessageButton">Send Message</button>
                             </div>
