@@ -17,6 +17,13 @@ $(function () {
             var email = $("input#email").val();
             var subject = $("input#subject").val();
             var message = $("textarea#message").val();
+            var findus =$("input#choice_25_23_1:checked").val();
+            var expectedDate =$("input#date-start").val();
+            var endDate =$("input#date-end").val();
+            var people =$("input#party").val();
+            var budget =$("input#choice_25_40_0:checked").val();
+            // const selected = document.querySelector('input[name="fruit"]:checked').value;
+
 
             $this = $("#sendMessageButton");
             $this.prop("disabled", true);
@@ -28,8 +35,13 @@ $(function () {
                     name: name,
                     email: email,
                     subject: subject,
-                    message: message
-                },
+                    message: message,
+                    findus: findus,
+                    expectedDate: expectedDate,
+                    endDate: endDate,
+                    people: people,
+                    budget: budget
+                 },
                 cache: false,
                 success: function () {
                     $('#success').html("<div class='alert alert-success'>");
